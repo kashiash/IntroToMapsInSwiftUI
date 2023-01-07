@@ -32,6 +32,9 @@ extension LocationManager: CLLocationManagerDelegate {
             self.location = location
         }
     }
+    
+    
+    
 }
 
 extension MKCoordinateRegion {

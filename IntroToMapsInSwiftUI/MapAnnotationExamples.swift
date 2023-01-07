@@ -21,7 +21,47 @@ extension AnnotationItem {
             AnnotationItem(name: "San Diego Zoo", coordinate: CLLocationCoordinate2D(latitude: 33.095829, longitude: -117.008797)),
             AnnotationItem(name: "Statue Of Liberty", coordinate: CLLocationCoordinate2D(latitude: 40.689247, longitude: -74.044502)),
             AnnotationItem(name: "Empire State Building", coordinate: CLLocationCoordinate2D(latitude: 40.74853801503154, longitude: -73.98590043614894))
+           // AnnotationItem(name: "Empire State Building", coordinate: fetchPlaces("Sejm RP Wiejska Warszawa"))
         ]
+    }
+    
+    func fetchPlaces(value: String){
+        // MARK: Fetching places using MKLocalSearch & Asyc/Await
+        Task{
+            do{
+                let request = MKLocalSearch.Request()
+                request.naturalLanguageQuery = value.lowercased()
+                
+                let response = try await MKLocalSearch(request: request).start()
+                // We can also Use Mainactor To publish changes in Main Thread
+                await MainActor.run(body: {
+                    let fetchedPlaces = response.mapItems.compactMap({ item -> CLLocationCoordinate2D? in
+     
+                        return item.placemark.location!.coordinate
+                    })
+                })
+            }
+            catch{
+                // HANDLE ERROR
+            }
+        }
+    }
+    
+    func getCoordinate( addressString : String,
+            completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void ) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(addressString) { (placemarks, error) in
+            if error == nil {
+                if let placemark = placemarks?[0] {
+                    let location = placemark.location!
+                        
+                    completionHandler(location.coordinate, nil)
+                    return
+                }
+            }
+                
+            completionHandler(kCLLocationCoordinate2DInvalid, error as NSError?)
+        }
     }
 }
 

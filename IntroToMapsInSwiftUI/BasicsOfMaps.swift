@@ -17,10 +17,13 @@ struct BasicsOfMaps: View {
         longitudinalMeters: 10000)
     
     var body: some View {
-        Map(coordinateRegion: $region,
-            interactionModes: [] // .PAN ONLY MOVE .ZOOM only zoom
-        )
-            .ignoresSafeArea()
+        ZStack{
+            Map(coordinateRegion: $region,
+                interactionModes: [] // .PAN ONLY MOVE .ZOOM only zoom
+            ).ignoresSafeArea()
+
+        }
+            
     }
 }
 

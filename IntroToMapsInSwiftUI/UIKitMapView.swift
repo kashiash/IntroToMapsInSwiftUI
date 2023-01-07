@@ -32,5 +32,7 @@ struct UIKitMapView: UIViewRepresentable {
         MapCoordinator()
     }
     
+    
+    
     final class MapCoordinator: NSObject, MKMapViewDelegate {}
 }
