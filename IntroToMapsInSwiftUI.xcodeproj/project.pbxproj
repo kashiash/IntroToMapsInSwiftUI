@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76612B2829699991000B26DF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76612B2729699991000B26DF /* Coordinator.swift */; };
 		9F0DA0E32817588D00272BB5 /* IntroToMapsInSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DA0E22817588D00272BB5 /* IntroToMapsInSwiftUIApp.swift */; };
 		9F0DA0E52817588D00272BB5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DA0E42817588D00272BB5 /* ContentView.swift */; };
 		9F0DA0E72817588F00272BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0DA0E62817588F00272BB5 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		76612B2729699991000B26DF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		9F0DA0DF2817588D00272BB5 /* IntroToMapsInSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntroToMapsInSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0DA0E22817588D00272BB5 /* IntroToMapsInSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroToMapsInSwiftUIApp.swift; sourceTree = "<group>"; };
 		9F0DA0E42817588D00272BB5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				9F0DA0F828188E8000272BB5 /* LocationManager.swift */,
 				9F0DA0FA2818915D00272BB5 /* MapWithUserLocation.swift */,
 				9F0DA0FE2819B2E100272BB5 /* CustomMapAnnotations.swift */,
+				76612B2729699991000B26DF /* Coordinator.swift */,
 			);
 			path = IntroToMapsInSwiftUI;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				9F0DA0E32817588D00272BB5 /* IntroToMapsInSwiftUIApp.swift in Sources */,
 				9F0DA0FD2818938700272BB5 /* MapMarkersAndPins.swift in Sources */,
 				9F0DA0F928188E8000272BB5 /* LocationManager.swift in Sources */,
+				76612B2829699991000B26DF /* Coordinator.swift in Sources */,
 				9F0DA0F52818721100272BB5 /* UIKitMapView.swift in Sources */,
 				9F0DA0F328175CBC00272BB5 /* MapAnnotationExamples.swift in Sources */,
 				9F0DA0FB2818915D00272BB5 /* MapWithUserLocation.swift in Sources */,
